@@ -43,7 +43,7 @@ vector<string> split(const string &s, char delimiter) {
 }
 
 int main() {
-    string filename = "/home/piotr/CLionProjects/lab2/data_1.txt";
+    string filename = "/home/piotr/CLionProjects/ZAISD/lab2/data.txt";
     runList(filename);
     runMatrix(filename);
     return 0;
@@ -79,7 +79,7 @@ void runList(string filename) {
             if (residualGraph[dest][src] == NONE) {
                 residualGraph[dest][src] = 0;
             }
-            residualGraph[dest][src] += pathFlow;
+            //residualGraph[dest][src] += pathFlow;
         }
         maxFlow += pathFlow;
     }

@@ -146,7 +146,7 @@ void BellmanFord(const list<Edge> &edges, int numberOfNodes, int destination) {
     initializeArrayWithIntMax(numberOfNodes, distance);
     distance[destination] = 0;
 
-    for (int i = 0; i < numberOfEdges; i++) {
+    for (int i = 0; i < numberOfNodes; i++) {
         for (Edge edge : edges) {
             if (distance[edge.dest] != INT_MAX && distance[edge.src] > distance[edge.dest] + edge.weight) {
                 distance[edge.src] = distance[edge.dest] + edge.weight;
